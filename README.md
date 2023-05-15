@@ -8,14 +8,13 @@
 Asyushsharma2003/Asyushsharma2003 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+ circleci/config.yml
+@@ -1,7 +1,7 @@
+version: 2.1
 
-pip install rmn
-
-# or build from source
-
-git clone git@github.com:phamquiluan/ResidualMaskingNetwork.git
-cd ResidualMaskingNetwork
-pip install -e 
-from rmn import RMN
-m = RMN()
-m.video_demo()
+workflows:
+  code-rot-check-daily:
+  daily-build:
+    triggers:
+      - schedule:
+          cron: "1 18 * * *"
