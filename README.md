@@ -16,3 +16,6 @@ pip install rmn
 git clone git@github.com:phamquiluan/ResidualMaskingNetwork.git
 cd ResidualMaskingNetwork
 pip install -e 
+from rmn import RMN
+m = RMN()
+m.video_demo()
